@@ -29,7 +29,8 @@
 .heading{
     margin-bottom:2rem;
     color: rgb(76,188,173);
-    font-family: cursive;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto Mono', monospace;
     letter-spacing: 2px;
     text-decoration: underline;
     font-size: xxx-large;
@@ -126,14 +127,14 @@
     100% { background-position: 0 0; }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
     .quotediv{
         width: 80%;
         height: 50%;
     }
 
     .quote{
-        font-size:large;
+        font-size:x-large;
         color:whitesmoke;
     }
 
