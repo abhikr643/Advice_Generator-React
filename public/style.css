@@ -1,0 +1,145 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.background{
+    position: relative; 
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(./sky.jpg); 
+    background-size: cover;
+    background-position:center
+}
+
+.app{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+}
+
+.heading{
+    margin-bottom:2rem;
+    color: rgb(76,188,173);
+    font-family: cursive;
+    letter-spacing: 2px;
+    text-decoration: underline;
+    font-size: xxx-large;
+}
+
+
+.quotediv{
+    border: solid transparent 2px;
+    background-color: rgba(53, 53, 53, 0.441);
+    border-radius: 25px;
+    height: 40%;
+    width: 50%;
+    padding: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.quote{
+    font-family: 'Poppins', sans-serif;
+    color:whitesmoke;
+    letter-spacing: 2px;
+    height: 580px;
+    display: flex;
+    align-items: center;
+    font-weight:900;
+
+}
+
+
+.glow-on-hover {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color:aliceblue;
+    background: #000000;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    font-size: large;
+    font-weight: 700;
+    font-family: cursive;
+    
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #9d00ff8d;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+@media only screen and (max-width: 600px) {
+    .quotediv{
+        width: 80%;
+        height: 30%;
+    }
+
+    .quote{
+        font-size: xxx-large;
+        font-weight: bolder;
+        color:whitesmoke;
+    }
+
+    .glow-on-hover{
+    width: 270px;
+    height: 90px;
+    }
+}
